@@ -1,0 +1,5 @@
+name: ArrowPickup
+main: com.samistine.arrowpickup.ArrowPickup
+version: 2.0
+description: Pickup all arrows including those from skeletons
+author: Sycholic && Samistine
