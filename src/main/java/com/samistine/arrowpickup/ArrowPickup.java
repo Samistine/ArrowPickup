@@ -21,6 +21,9 @@ public class ArrowPickup extends JavaPlugin implements Listener {
 
 	@EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
 	public void onHit(ProjectileHitEvent e) {
+		if (!e.getEntity().getClass().getName().endsWith("CraftArrow")){
+			return;
+		}
 		try {
 			//instead of using null I used (new Class<?>[0]) and (new Object[0])
 			//More on that http://stackoverflow.com/questions/5586862/weird-behaviour-of-getmethod-in-java-reflection-api-can-someone-explain-this
