@@ -5,7 +5,7 @@
 	<artifactId>ArrowPickup</artifactId>
 	<version>2</version>
 	<build>
-	<finalName>ArrowPickup</finalName>
+		<finalName>ArrowPickup</finalName>
 		<resources>
 			<resource>
 				<directory>${basedir}/src/main/java</directory>
@@ -23,6 +23,30 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<repositories>
@@ -33,11 +57,13 @@
 	</repositories>
 	<dependencies>
 		<!--Bukkit API -->
-                <dependency>
-                        <groupId>org.bukkit</groupId>
-                        <artifactId>bukkit</artifactId>
-                        <version>1.8-R0.1-SNAPSHOT</version>
-                        <scope>compile</scope>
-                </dependency>
+		<dependency>
+			<groupId>org.bukkit</groupId>
+			<artifactId>craftbukkit</artifactId>
+			<version>1.7.10-R0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
+	<ciManagement>
+		<system>jenkins</system>
+	</ciManagement>
 </project>
