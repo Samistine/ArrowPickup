@@ -5,6 +5,7 @@
 	<artifactId>ArrowPickup</artifactId>
 	<version>2</version>
 	<build>
+	<finalName>ArrowPickup</finalName>
 		<resources>
 			<resource>
 				<directory>${basedir}/src/main/java</directory>
